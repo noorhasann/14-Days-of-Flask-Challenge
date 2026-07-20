@@ -1,0 +1,14 @@
+# Virtual Environments
+venv/
+env/
+ENV/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local Databases & Environments
+*.db
+*.sqlite3
+instance/
+.env
