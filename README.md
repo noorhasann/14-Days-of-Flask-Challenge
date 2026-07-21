@@ -51,7 +51,7 @@ By exploring this 14-day challenge, you will gain hands-on experience with the f
 | Day | Project | Topics Covered | Status |
 |-----|---------|----------------|--------|
 | 01 | Bio API | Flask Basics, Routes, HTML Response, Dynamic Routes, JSON Response | ✅ |
-| 02 | Coming Soon | - | ⏳ |
+| 02 |dynamic-bio-interactive-portfolio |Jinja2 Templating, `render_template`, Passing Context Data, Control Structures (`{% for %}`, `{% if %}`), Dictionary Iteration| ✅ |
 | 03 | Coming Soon | - | ⏳ |
 | 04 | Coming Soon | - | ⏳ |
 | 05 | Coming Soon | - | ⏳ |
