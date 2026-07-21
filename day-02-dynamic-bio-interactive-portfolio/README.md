@@ -14,9 +14,7 @@ This project was built as part of my **Day 2 Mini-Project** in Web Development, 
 
 # 📷 Preview
 
-```
 ![Project Preview](assets/ss.png)
-```
 
 ---
 
