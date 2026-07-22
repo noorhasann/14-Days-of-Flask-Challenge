@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - My Portfolio{% endblock %}
+
+{% block content %}
+    <h1>My Projects</h1>
+    <div class="project-grid">
+        {% for p in projects %}
+            <div class="card">
+                <h3>{{ p.title }}</h3>
+                <p>Tech Stack: {{ p.tech }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
