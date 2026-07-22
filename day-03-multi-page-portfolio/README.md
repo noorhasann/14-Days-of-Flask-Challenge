@@ -8,15 +8,12 @@ This project is part of my **14 Days of Flask Challenge**, where I learn Flask b
 
 # 📸 Preview
 
-> Add your screenshots here
-
-```md
 ![Home](assets/home.png)
 
 ![Projects](assets/projects.png)
 
 ![Contact](assets/contact.png)
-```
+
 
 ---
 
