@@ -1,0 +1,15 @@
+# Python virtual environment
+env/
+venv/
+.venv/
+
+# Python bytecode & cache files
+__pycache__/
+*.py[cod]
+
+# Environment variables (if you add secret keys later)
+.env
+
+# IDE / Editor settings
+.vscode/
+.idea/
