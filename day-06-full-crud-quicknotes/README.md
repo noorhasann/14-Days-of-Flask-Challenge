@@ -13,7 +13,7 @@ This project demonstrates how to build a database-driven web application where u
 
 # 📸 Project Preview
 
-![Project Preview](assets/preview.png)
+![Project Preview](assets/ss.png)
 
 ---
 
