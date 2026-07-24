@@ -53,8 +53,8 @@ By exploring this 14-day challenge, you will gain hands-on experience with the f
 | 01 | Bio API | Flask Basics, Routes, HTML Response, Dynamic Routes, JSON Response | ✅ |
 | 02 |dynamic-bio-interactive-portfolio |Jinja2 Templating, `render_template`, Passing Context Data, Control Structures (`{% for %}`, `{% if %}`), Dictionary Iteration| ✅ |
 | 03 | multi-page portfolio |Template Inheritance (`{% extends %}`, `{% block %}`), Reusable Layouts (`base.html`), `url_for()` Navigation, Static Files| ✅ |
-| 04 | Coming Soon | - | ⏳ |
-| 05 | Coming Soon | - | ⏳ |
+| 04 | In-Memory QuickNotes App | HTTP Methods (GET & POST), HTML Forms, request.form, request.method, redirect(), url_for(), In-Memory Data Storage (Python List), Dynamic Rendering with Jinja2 | ✅ |
+| 05 | Persistent QuickNotes with SQLite | Flask-SQLAlchemy, SQLite Database, Database Models, ORM, db.create_all(), db.session.add(), db.session.commit(), Querying Records, order_by(), Persistent Data Storage | ✅ |
 | 06 | Coming Soon | - | ⏳ |
 | 07 | Coming Soon | - | ⏳ |
 | 08 | Coming Soon | - | ⏳ |

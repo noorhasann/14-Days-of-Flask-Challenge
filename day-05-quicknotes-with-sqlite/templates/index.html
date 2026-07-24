@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 05 - Persistent QuickNotes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 0 20px;
+            background-color: skyblue;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .form-card {
+            max-width: 100%;
+            margin: auto;
+            background: white;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #219150;
+        }
+
+        .note-card {
+            background-color: whitesmoke;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            margin-bottom: 15px;
+            border-left: 5px solid #3498db;
+        }
+
+        .note-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+
+        .note-date {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .note-content {
+            font-size: 1rem;
+            color: #555;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="form-card">
+        <h1>📝 QuickNotes with SQLite</h1>
+        <form action="/" method="POST">
+            <input type="text" name="title" placeholder="Note Title..." required>
+            <textarea name="content" rows="4" placeholder="Write your note here..." required></textarea>
+            <button type="submit">Save</button>
+        </form>
+
+
+        <h2>Saved Notes</h2>
+        {% if notes %}
+        {% for note in notes %}
+        <div class="note-card">
+            <div class="note-title">{{ note.title }}</div>
+            <div class="note-content">{{ note.content }}</div>
+            <div class="note-date">Saved on: {{ note.date_created.strftime('%Y-%m-%d %H:%M') }}</div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <p style="color: #7f8c8d; text-align: center;">Abhi koi notes saved nahi hain. Upar wale form se pehla note
+            create karein!</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
