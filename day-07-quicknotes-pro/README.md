@@ -6,7 +6,7 @@ Today's focus was making the QuickNotes application production-ready by implemen
 
 ## 📸 Project Preview
 
-![Project Preview](assets/ss .png)
+![Project Preview](assets/ss.png)
 
 ---
 
