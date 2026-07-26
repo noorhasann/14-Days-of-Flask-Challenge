@@ -193,7 +193,7 @@ git clone https://github.com/noorhasann/14-Days-of-Flask-Challenge.git
 Move inside project
 
 ```bash
-cd Day-08-Flask-Authentication
+cd day-08-blog-engine-user-auth
 ```
 
 Create virtual environment
