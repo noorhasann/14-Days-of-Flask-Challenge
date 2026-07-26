@@ -30,16 +30,17 @@ Today's focus was making the QuickNotes application production-ready by implemen
 
 ## 📂 Project Structure
 
-day-07-quicknotes-pro/
-├── assets/
+```
+Day-07-quicknotes-pro/
+│── assets/
 │   └── ss.png
-├── app.py                 # Main Flask Application & Error Handlers
-├── instance/
-│   └── notes.db           # SQLite Database
-├── templates/
-│   ├── index.html         # Main Workspace & Notes List (with Flash Messages)
-│   └── 404.html           # Custom 404 Page Not Found Template
-└── README.md              # Project Documentation
+│── app.py
+│── requirements.txt
+│── templates/
+│   ├── index.html
+│   ├── edit.html
+│   └── 404.html
+```
 
 ---
 
