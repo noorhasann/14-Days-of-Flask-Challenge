@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-07 Quicknotes pro</title>
+    <style>
+        /* Body ko full screen height di */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            color: #333;
+            height: 100vh;
+            overflow: hidden;
+            /* Main window scroll band */
+        }
+
+        /* Screen split karne ke liye Flexbox Container */
+        .app-layout {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* 👈 Left Sidebar (History Area) */
+        .sidebar {
+            width: 320px;
+            background: #ffffff;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            overflow-y: auto;
+            /* History scrollable hogi */
+        }
+
+        /* 👉 Right Workspace (Form Area) */
+        .main-workspace {
+            flex-grow: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 16px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .btn-add {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-edit {
+            background-color: #ffc107;
+            color: #212529;
+            margin-right: 8px;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .actions {
+            margin-top: 15px;
+        }
+
+        /* Custom Alert Box Styles */
+        .alert {
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #842029;
+            border: 1px solid #f5c2c7;
+        }
+
+        .alert-success {
+            background-color: #d1e7dd;
+            color: #0f5132;
+            border: 1px solid #badbcc;
+        }
+
+        .btn-close {
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-layout">
+
+        <!-- 👈 1. LEFT SIDEBAR (Sirf Saved Notes wala section yahan move kar do) -->
+        <div class="sidebar">
+            <h3>Your Saved Notes</h3>
+            {% if notes %}
+                {% for note in notes %}
+                <div class="card">
+                    <h4>{{ note.title }}</h4>
+                    <p>{{ note.content }}</p>
+                    <div class="actions">
+                        <a href="/edit/{{ note.id }}" class="btn btn-edit">✏️ Edit</a>
+                        <a href="/delete/{{ note.id }}" onclick="return confirm('Kya aap sach mein ise delete karna chahte hain?');" class="btn btn-delete">🗑️ Delete</a>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p style="color: #666;">Koi notes nahi mile.</p>
+            {% endif %}
+        </div>
+
+        <!-- 👉 2. RIGHT WORKSPACE (Header, Flash Messages, aur Create Form yahan rahega) -->
+        <div class="main-workspace">
+            <h2>📝 QUICKNOTES PRO</h2>
+
+            <!-- 🔔 FLASH MESSAGES DISPLAY -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" onclick="this.parentElement.style.display='none';">&times;</button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            <!-- CREATE FORM -->
+            <div class="card">
+                <h3>Add New Note</h3>
+                <form action="/" method="POST">
+                    <input type="text" name="title" placeholder="Title...">
+                    <textarea name="content" rows="3" placeholder="Write your note here..."></textarea>
+                    <button type="submit" class="btn btn-add">Save Note</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
