@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Protected Area</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold text-slate-800">My App</h1>
+        <div class="flex items-center space-x-4">
+            <span class="text-sm font-medium text-slate-600">Logged in as: <strong class="text-slate-900">{{ name }}</strong></span>
+            <a href="{{ url_for('logout') }}" 
+               class="bg-red-500 hover:bg-red-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition duration-150 shadow-sm">
+                Logout
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="max-w-4xl mx-auto mt-10 p-6">
+        
+        <!-- Flash Message Area -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="mb-6 p-4 rounded-lg text-sm font-medium {% if category == 'success' %}bg-green-100 text-green-700{% else %}bg-blue-100 text-blue-700{% endif %}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full mb-4">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+            </div>
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Welcome, {{ name }}! 🎉</h2>
+            <p class="text-slate-600 max-w-md mx-auto mb-6">
+                Ye aapka protected dashboard hai. Bina login kiye koi guest user is URL ko direct access nahi kar sakta.
+            </p>
+            <span class="inline-block bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-semibold">
+                ✓ Session Active
+            </span>
+        </div>
+    </main>
+
+</body>
+</html>
