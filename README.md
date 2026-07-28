@@ -55,10 +55,10 @@ By exploring this 14-day challenge, you will gain hands-on experience with the f
 | 03 | multi-page portfolio |Template Inheritance (`{% extends %}`, `{% block %}`), Reusable Layouts (`base.html`), `url_for()` Navigation, Static Files| ✅ |
 | 04 | In-Memory QuickNotes App | HTTP Methods (GET & POST), HTML Forms, request.form, request.method, redirect(), url_for(), In-Memory Data Storage (Python List), Dynamic Rendering with Jinja2 | ✅ |
 | 05 | Persistent QuickNotes with SQLite | Flask-SQLAlchemy, SQLite Database, Database Models, ORM, db.create_all(), db.session.add(), db.session.commit(), Querying Records, order_by(), Persistent Data Storage | ✅ |
-| 06 | Coming Soon | - | ⏳ |
-| 07 | Coming Soon | - | ⏳ |
-| 08 | Coming Soon | - | ⏳ |
-| 09 | Coming Soon | - | ⏳ |
+| 06 | quicknotes-CRUD | Create, Read, Update, Delete (CRUD), Dynamic Routes, URL Parameters, Record Editing, Record Deletion, SQLAlchemy Queries | ✅ |
+| 07 | quicknotes pro | CRUD Operations, SQLite Database, Flask-SQLAlchemy, Flash Messages, Form Validation, Search Functionality, Responsive UI, Timestamp Management, Professional Project Structure | ✅ |
+| 08 | blog engine-user authentication | User Registration, Password Hashing, Email & Username Validation, Werkzeug Security, Flash Messages, User Model Design | ✅ |
+| 09 | blog engine-login&logout and sessionshield | Flask-Login, User Sessions, Login & Logout, `@login_required`, Protected Routes, `current_user`, Session Management, Authentication Flow | ✅ |
 | 10 | Coming Soon | - | ⏳ |
 | 11 | Coming Soon | - | ⏳ |
 | 12 | Coming Soon | - | ⏳ |
