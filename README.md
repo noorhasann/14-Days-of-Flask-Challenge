@@ -59,7 +59,7 @@ By exploring this 14-day challenge, you will gain hands-on experience with the f
 | 07 | quicknotes pro | CRUD Operations, SQLite Database, Flask-SQLAlchemy, Flash Messages, Form Validation, Search Functionality, Responsive UI, Timestamp Management, Professional Project Structure | ✅ |
 | 08 | blog engine-user authentication | User Registration, Password Hashing, Email & Username Validation, Werkzeug Security, Flash Messages, User Model Design | ✅ |
 | 09 | blog engine-login&logout and sessionshield | Flask-Login, User Sessions, Login & Logout, `@login_required`, Protected Routes, `current_user`, Session Management, Authentication Flow | ✅ |
-| 10 | Coming Soon | - | ⏳ |
+| 10 | Blog Engine: Relational DB (Users + Posts) | 1-to-Many Relationships, Relational Database Modeling, Foreign Keys (db.ForeignKey), SQLAlchemy Relationships (db.relationship), User–Post Association, Author-Post Linkage, Multi-User Blog Platform | ✅ |
 | 11 | Coming Soon | - | ⏳ |
 | 12 | Coming Soon | - | ⏳ |
 | 13 | Coming Soon | - | ⏳ |
