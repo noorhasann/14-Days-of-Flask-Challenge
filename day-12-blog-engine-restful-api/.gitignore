@@ -1,0 +1,23 @@
+# Database files (SQLite)
+*.db
+*.sqlite3
+instance/
+
+# Python Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables & secrets
+.env
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
