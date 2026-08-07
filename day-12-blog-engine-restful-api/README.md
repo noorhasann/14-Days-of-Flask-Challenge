@@ -293,4 +293,4 @@ By completing Day 12, I learned how to:
 
 **Noor Hasan**
 
-**GitHub:** [Your GitHub Profile]
+**GitHub:** https://github.com/noorhasann
